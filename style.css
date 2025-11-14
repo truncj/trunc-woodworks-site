@@ -338,7 +338,7 @@ footer {
 @media (max-width: 768px) {
     nav {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center; /* Changed from flex-start to center */
     }
 
     nav ul {
@@ -365,6 +365,7 @@ footer {
         margin-left: 0;
         text-align: center;
         width: 100%;
+        margin: 0 auto; /* Added to center the logo horizontally */
     }
 
     .hero h1 {
