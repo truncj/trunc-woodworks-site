@@ -75,7 +75,8 @@ nav ul li a {
     transition: all 0.3s ease;
 }
 
-nav ul li a:hover {
+nav ul li a:hover,
+nav ul li a.active {
     background-color: rgba(255, 255, 255, 0.3);
     border-color: white;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
@@ -195,6 +196,85 @@ nav ul li a i {
 
 .embed-placeholder strong {
     color: var(--primary-brown);
+}
+
+/* Catalog Page Styles */
+.page-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.page-header h1 {
+    font-size: 3em;
+    color: var(--primary-brown);
+    margin-bottom: 0.5em;
+}
+
+.page-header p {
+    font-size: 1.2em;
+    color: var(--dark-gray);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.catalog-item {
+    background-color: #fdfdfd;
+    border: 1px solid var(--secondary-beige);
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.catalog-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.catalog-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.catalog-item h3 {
+    font-size: 1.8em;
+    color: var(--primary-brown);
+    margin: 15px 0 10px;
+}
+
+.catalog-item p {
+    font-size: 1em;
+    color: var(--dark-gray);
+    padding: 0 15px 15px;
+    margin: 0;
+}
+
+.catalog-item.custom-option {
+    background-color: var(--secondary-beige);
+    border-color: var(--primary-brown);
+}
+
+.catalog-item.custom-option h3 {
+    color: var(--dark-gray);
+}
+
+.catalog-item.custom-option p {
+    color: var(--dark-gray);
+}
+
+.catalog-item .btn {
+    margin-top: 10px;
+    margin-bottom: 15px;
 }
 
 /* Contact Page */
