@@ -384,7 +384,7 @@ const ContactPage = () => {
           </div>
 
           <div className="relative z-10 mt-12 pt-12 border-t border-stone-800">
-            <p className="text-wood-400 font-serif italic text-lg">"Measure twice, cut once."</p>
+            <p className="text-wood-400 font-serif italic text-lg">"Measure ten times, cut once."</p>
           </div>
         </div>
 
