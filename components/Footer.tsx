@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Instagram, Youtube, Video, Mail } from 'lucide-react';
 import { SOCIAL_LINKS, BRAND_LOGO } from '../constants';
 

@@ -5,6 +5,7 @@ export interface Project {
   imageUrl: string;
   category: 'furniture' | 'decor' | 'restoration';
   additionalImages?: string[];
+  priority?: number;
 }
 
 export interface TikTokVideo {

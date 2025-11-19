@@ -4,33 +4,32 @@ import { ArrowRight, CheckCircle2, PenTool, Box, Hammer, X, ChevronLeft, Chevron
 
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import DesignAssistant from './components/DesignAssistant';
-import { NavRoute, Project, CatalogItem } from './types';
+import { NavRoute, Project } from './types';
 import { GALLERY_PROJECTS, CATALOG_ITEMS, TIKTOK_VIDEOS, SOCIAL_LINKS, BRAND_LOGO, HERO_IMAGE_URL } from './constants';
 
 // --- Home Page Component ---
 const HomePage = () => {
   const navigate = useNavigate();
-  
+
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
       <section className="relative h-[85vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img 
+          <img
             src={HERO_IMAGE_URL}
-            alt="Woodworking Workshop" 
+            alt="Woodworking Workshop"
             className="w-full h-full object-cover opacity-30"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-stone-900/80 to-stone-900/90"></div>
         </div>
-        
+
         <div className="relative z-10 max-w-7xl mx-auto px-4 text-center">
           <div className="mb-8 flex justify-center">
             <div className="p-2 bg-white/10 backdrop-blur-sm rounded-full border border-stone-600">
-              <img 
-                src={BRAND_LOGO.src} 
-                alt={BRAND_LOGO.alt} 
+              <img
+                src={BRAND_LOGO.src}
+                alt={BRAND_LOGO.alt}
                 className="w-32 h-32 md:w-48 md:h-48 rounded-full object-cover bg-stone-50 shadow-2xl"
               />
             </div>
@@ -39,17 +38,16 @@ const HomePage = () => {
             Made to Measure. <span className="text-wood-500">Built to Last.</span>
           </h1>
           <p className="text-xl text-stone-300 mb-10 font-light max-w-2xl mx-auto leading-relaxed">
-            Trunc Woodworks creates bespoke, handcrafted furniture that tells a story. 
-            From freelance commissions to restoration, we bring natural beauty into your space.
+            Custom woodworking for your home and family. From Montessori-style kids' furniture to stylish dog crates and built-ins, we build practical, beautiful pieces designed to fit your life.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <button 
+            <button
               onClick={() => navigate(NavRoute.CATALOG)}
               className="px-8 py-4 bg-wood-600 hover:bg-wood-500 text-white rounded-full font-semibold transition-all transform hover:scale-105 shadow-lg flex items-center justify-center gap-2"
             >
               View Catalog <ArrowRight className="h-4 w-4" />
             </button>
-            <button 
+            <button
               onClick={() => navigate(NavRoute.CONTACT)}
               className="px-8 py-4 border border-stone-500 text-stone-300 hover:text-white hover:border-white rounded-full font-semibold transition-all"
             >
@@ -67,35 +65,24 @@ const HomePage = () => {
               <div className="w-16 h-16 bg-wood-100 rounded-full flex items-center justify-center mx-auto mb-6 text-wood-600">
                 <PenTool className="h-8 w-8" />
               </div>
-              <h3 className="text-xl font-bold text-stone-900 mb-3">Custom Design</h3>
-              <p className="text-stone-600">Collaborate directly with the maker to build furniture that fits your exact dimensions and style.</p>
+              <h3 className="text-xl font-bold text-stone-900 mb-3">Made For Your Home</h3>
+              <p className="text-stone-600">Built to fit your space perfectly. Whether it's a weird corner or a specific vision, we'll make it happen.</p>
             </div>
             <div className="p-8 bg-white rounded-2xl shadow-sm border border-stone-100 hover:shadow-md transition-shadow">
               <div className="w-16 h-16 bg-wood-100 rounded-full flex items-center justify-center mx-auto mb-6 text-wood-600">
                 <Hammer className="h-8 w-8" />
               </div>
-              <h3 className="text-xl font-bold text-stone-900 mb-3">Handcrafted Quality</h3>
-              <p className="text-stone-600">Traditional joinery meets modern aesthetics. Built to last for generations, not just seasons.</p>
+              <h3 className="text-xl font-bold text-stone-900 mb-3">Built To Last</h3>
+              <p className="text-stone-600">Solid wood, real joinery, and attention to detail. Furniture that stands up to daily use (and kids).</p>
             </div>
             <div className="p-8 bg-white rounded-2xl shadow-sm border border-stone-100 hover:shadow-md transition-shadow">
               <div className="w-16 h-16 bg-wood-100 rounded-full flex items-center justify-center mx-auto mb-6 text-wood-600">
                 <Box className="h-8 w-8" />
               </div>
-              <h3 className="text-xl font-bold text-stone-900 mb-3">Sustainable Material</h3>
-              <p className="text-stone-600">We prioritize locally sourced, sustainable hardwoods and eco-friendly finishes.</p>
+              <h3 className="text-xl font-bold text-stone-900 mb-3">Safe & Solid</h3>
+              <p className="text-stone-600">Quality materials that look good and last. We use durable hardwoods and safe, family-friendly finishes.</p>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* AI Design Assistant Section */}
-      <section className="py-20 bg-stone-900">
-        <div className="max-w-4xl mx-auto px-4">
-          <div className="text-center mb-10">
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-white mb-4">Dream It. We Build It.</h2>
-            <p className="text-stone-400">Use our AI assistant below to spark some inspiration for your next piece.</p>
-          </div>
-          <DesignAssistant />
         </div>
       </section>
     </div>
@@ -141,17 +128,15 @@ const PortfolioPage = () => {
           <div className="bg-white p-1 rounded-full shadow-sm border border-stone-200 inline-flex">
             <button
               onClick={() => setActiveTab('gallery')}
-              className={`px-6 py-2 rounded-full text-sm font-medium transition-all ${
-                activeTab === 'gallery' ? 'bg-stone-900 text-white' : 'text-stone-600 hover:text-stone-900'
-              }`}
+              className={`px-6 py-2 rounded-full text-sm font-medium transition-all ${activeTab === 'gallery' ? 'bg-stone-900 text-white' : 'text-stone-600 hover:text-stone-900'
+                }`}
             >
               Photo Gallery
             </button>
             <button
               onClick={() => setActiveTab('tiktok')}
-              className={`px-6 py-2 rounded-full text-sm font-medium transition-all ${
-                activeTab === 'tiktok' ? 'bg-stone-900 text-white' : 'text-stone-600 hover:text-stone-900'
-              }`}
+              className={`px-6 py-2 rounded-full text-sm font-medium transition-all ${activeTab === 'tiktok' ? 'bg-stone-900 text-white' : 'text-stone-600 hover:text-stone-900'
+                }`}
             >
               TikTok Feed
             </button>
@@ -161,16 +146,16 @@ const PortfolioPage = () => {
         {/* Gallery Grid */}
         {activeTab === 'gallery' && (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {GALLERY_PROJECTS.map((project) => (
-              <div 
-                key={project.id} 
+            {GALLERY_PROJECTS.sort((a, b) => (a.priority || 0) - (b.priority || 0)).map((project) => (
+              <div
+                key={project.id}
                 className="group relative overflow-hidden rounded-xl shadow-md cursor-pointer"
                 onClick={() => setSelectedProject(project)}
               >
                 <div className="aspect-[4/3] bg-stone-200">
-                  <img 
-                    src={project.imageUrl} 
-                    alt={project.title} 
+                  <img
+                    src={project.imageUrl}
+                    alt={project.title}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                 </div>
@@ -207,14 +192,14 @@ const PortfolioPage = () => {
             ))}
           </div>
         )}
-        
+
         {/* Lightbox Modal with Carousel */}
         {selectedProject && (
-          <div 
+          <div
             className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 p-4 backdrop-blur-sm"
             onClick={() => setSelectedProject(null)}
           >
-            <button 
+            <button
               className="absolute top-6 right-6 text-stone-400 hover:text-white p-2 transition-colors z-50 bg-stone-800/50 rounded-full"
               onClick={(e) => {
                 e.stopPropagation();
@@ -223,80 +208,79 @@ const PortfolioPage = () => {
             >
               <X className="h-8 w-8" />
             </button>
-            
-            <div 
+
+            <div
               className="max-w-6xl w-full max-h-screen flex flex-col items-center"
               onClick={(e) => e.stopPropagation()}
             >
-               {/* Construct list of all images: Main + Additional */}
-               {(() => {
-                  const allImages = [selectedProject.imageUrl, ...(selectedProject.additionalImages || [])];
-                  const hasMultipleImages = allImages.length > 1;
+              {/* Construct list of all images: Main + Additional */}
+              {(() => {
+                const allImages = [selectedProject.imageUrl, ...(selectedProject.additionalImages || [])];
+                const hasMultipleImages = allImages.length > 1;
 
-                  return (
-                    <>
-                      <div className="relative w-full flex justify-center items-center">
-                        {/* Prev Button */}
-                        {hasMultipleImages && (
-                          <button 
-                            onClick={(e) => handlePrevImage(e, allImages.length)}
-                            className="absolute left-2 md:left-4 p-2 md:p-3 bg-stone-800/50 hover:bg-stone-700 text-white rounded-full transition-all z-10 backdrop-blur-sm"
-                          >
-                            <ChevronLeft className="h-6 w-6 md:h-8 md:w-8" />
-                          </button>
-                        )}
-
-                        {/* Main Image */}
-                        <img 
-                          src={allImages[currentImageIndex]} 
-                          alt={`${selectedProject.title} - View ${currentImageIndex + 1}`} 
-                          className="max-h-[65vh] md:max-h-[70vh] max-w-full object-contain rounded-md shadow-2xl border border-stone-800"
-                        />
-
-                        {/* Next Button */}
-                        {hasMultipleImages && (
-                          <button 
-                             onClick={(e) => handleNextImage(e, allImages.length)}
-                             className="absolute right-2 md:right-4 p-2 md:p-3 bg-stone-800/50 hover:bg-stone-700 text-white rounded-full transition-all z-10 backdrop-blur-sm"
-                          >
-                            <ChevronRight className="h-6 w-6 md:h-8 md:w-8" />
-                          </button>
-                        )}
-                      </div>
-
-                      {/* Thumbnails */}
+                return (
+                  <>
+                    <div className="relative w-full flex justify-center items-center">
+                      {/* Prev Button */}
                       {hasMultipleImages && (
-                        <div className="flex gap-2 mt-4 overflow-x-auto max-w-full pb-2 px-2 scrollbar-hide">
-                          {allImages.map((img, idx) => (
-                            <button
-                              key={idx}
-                              onClick={(e) => handleThumbnailClick(e, idx)}
-                              className={`relative h-16 w-16 flex-shrink-0 rounded-md overflow-hidden border-2 transition-all ${
-                                currentImageIndex === idx ? 'border-wood-500 opacity-100' : 'border-transparent opacity-50 hover:opacity-80'
-                              }`}
-                            >
-                              <img src={img} alt={`Thumbnail ${idx + 1}`} className="w-full h-full object-cover" />
-                            </button>
-                          ))}
-                        </div>
+                        <button
+                          onClick={(e) => handlePrevImage(e, allImages.length)}
+                          className="absolute left-2 md:left-4 p-2 md:p-3 bg-stone-800/50 hover:bg-stone-700 text-white rounded-full transition-all z-10 backdrop-blur-sm"
+                        >
+                          <ChevronLeft className="h-6 w-6 md:h-8 md:w-8" />
+                        </button>
                       )}
 
-                      {/* Description */}
-                      <div className="mt-4 text-center animate-fade-in max-w-2xl px-4">
-                        <div className="flex items-center justify-center gap-3 mb-2">
-                           <span className="text-wood-500 text-sm font-bold uppercase tracking-wider">{selectedProject.category}</span>
-                           {hasMultipleImages && (
-                             <span className="text-stone-500 text-xs bg-stone-900 px-2 py-0.5 rounded-full">
-                               {currentImageIndex + 1} / {allImages.length}
-                             </span>
-                           )}
-                        </div>
-                        <h3 className="text-2xl md:text-3xl font-serif font-bold text-white mb-2">{selectedProject.title}</h3>
-                        <p className="text-stone-400 text-sm md:text-base">{selectedProject.description}</p>
+                      {/* Main Image */}
+                      <img
+                        src={allImages[currentImageIndex]}
+                        alt={`${selectedProject.title} - View ${currentImageIndex + 1}`}
+                        className="max-h-[65vh] md:max-h-[70vh] max-w-full object-contain rounded-md shadow-2xl border border-stone-800"
+                      />
+
+                      {/* Next Button */}
+                      {hasMultipleImages && (
+                        <button
+                          onClick={(e) => handleNextImage(e, allImages.length)}
+                          className="absolute right-2 md:right-4 p-2 md:p-3 bg-stone-800/50 hover:bg-stone-700 text-white rounded-full transition-all z-10 backdrop-blur-sm"
+                        >
+                          <ChevronRight className="h-6 w-6 md:h-8 md:w-8" />
+                        </button>
+                      )}
+                    </div>
+
+                    {/* Thumbnails */}
+                    {hasMultipleImages && (
+                      <div className="flex gap-2 mt-4 overflow-x-auto max-w-full pb-2 px-2 scrollbar-hide">
+                        {allImages.map((img, idx) => (
+                          <button
+                            key={idx}
+                            onClick={(e) => handleThumbnailClick(e, idx)}
+                            className={`relative h-16 w-16 flex-shrink-0 rounded-md overflow-hidden border-2 transition-all ${currentImageIndex === idx ? 'border-wood-500 opacity-100' : 'border-transparent opacity-50 hover:opacity-80'
+                              }`}
+                          >
+                            <img src={img} alt={`Thumbnail ${idx + 1}`} className="w-full h-full object-cover" />
+                          </button>
+                        ))}
                       </div>
-                    </>
-                  );
-               })()}
+                    )}
+
+                    {/* Description */}
+                    <div className="mt-4 text-center animate-fade-in max-w-2xl px-4">
+                      <div className="flex items-center justify-center gap-3 mb-2">
+                        <span className="text-wood-500 text-sm font-bold uppercase tracking-wider">{selectedProject.category}</span>
+                        {hasMultipleImages && (
+                          <span className="text-stone-500 text-xs bg-stone-900 px-2 py-0.5 rounded-full">
+                            {currentImageIndex + 1} / {allImages.length}
+                          </span>
+                        )}
+                      </div>
+                      <h3 className="text-2xl md:text-3xl font-serif font-bold text-white mb-2">{selectedProject.title}</h3>
+                      <p className="text-stone-400 text-sm md:text-base">{selectedProject.description}</p>
+                    </div>
+                  </>
+                );
+              })()}
             </div>
           </div>
         )}
@@ -308,7 +292,7 @@ const PortfolioPage = () => {
 // --- Catalog Page Component ---
 const CatalogPage = () => {
   const navigate = useNavigate();
-  
+
   return (
     <div className="pt-12 pb-24 px-4 bg-white min-h-screen">
       <div className="max-w-7xl mx-auto">
@@ -321,7 +305,7 @@ const CatalogPage = () => {
           {CATALOG_ITEMS.map((item) => (
             <div key={item.id} className="flex flex-col md:flex-row bg-stone-50 rounded-2xl overflow-hidden shadow-sm border border-stone-100">
               <div className="md:w-2/5 h-64 md:h-auto relative">
-                 <img src={item.imageUrl} alt={item.name} className="absolute inset-0 w-full h-full object-cover" />
+                <img src={item.imageUrl} alt={item.name} className="absolute inset-0 w-full h-full object-cover" />
               </div>
               <div className="p-8 md:w-3/5 flex flex-col">
                 <h3 className="text-2xl font-bold text-stone-900 mb-2">{item.name}</h3>
@@ -335,7 +319,7 @@ const CatalogPage = () => {
                     </li>
                   ))}
                 </ul>
-                <button 
+                <button
                   onClick={() => navigate(NavRoute.CONTACT)}
                   className="w-full py-3 border-2 border-stone-900 text-stone-900 font-semibold hover:bg-stone-900 hover:text-white transition-colors rounded-lg"
                 >
@@ -350,7 +334,7 @@ const CatalogPage = () => {
         <div className="mt-20 bg-wood-600 rounded-3xl p-12 text-center text-white">
           <h2 className="text-3xl font-serif font-bold mb-4">Have something else in mind?</h2>
           <p className="mb-8 text-wood-100 max-w-xl mx-auto">We specialize in one-of-a-kind projects. If you can dream it, we can build it.</p>
-          <button 
+          <button
             onClick={() => navigate(NavRoute.CONTACT)}
             className="px-10 py-4 bg-white text-wood-700 font-bold rounded-full hover:bg-stone-100 transition-colors shadow-xl"
           >
@@ -367,14 +351,14 @@ const ContactPage = () => {
   return (
     <div className="pt-12 pb-24 px-4 bg-stone-50 min-h-screen flex items-center">
       <div className="max-w-5xl mx-auto w-full bg-white rounded-3xl shadow-xl overflow-hidden flex flex-col md:flex-row">
-        
+
         {/* Info Side */}
         <div className="bg-stone-900 p-12 md:w-1/2 text-white flex flex-col justify-between relative overflow-hidden">
-           {/* Abstract BG Shape */}
-           <div className="absolute -top-24 -right-24 w-64 h-64 bg-wood-600 rounded-full opacity-20 blur-3xl"></div>
-           <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-black/50 to-transparent"></div>
+          {/* Abstract BG Shape */}
+          <div className="absolute -top-24 -right-24 w-64 h-64 bg-wood-600 rounded-full opacity-20 blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-black/50 to-transparent"></div>
 
-           <div className="relative z-10">
+          <div className="relative z-10">
             <h2 className="text-3xl font-serif font-bold mb-6">Get in Touch</h2>
             <p className="text-stone-300 mb-12 leading-relaxed">
               Ready to start your project? Reach out via email or DM us on social media. We typically respond within 24 hours.
@@ -388,28 +372,28 @@ const ContactPage = () => {
                   <p className="text-stone-400 text-sm">Mahwah, NJ</p>
                 </div>
               </div>
-              
+
               <div className="flex items-start space-x-4">
-                 <div className="mt-1"><Box className="h-6 w-6 text-wood-500" /></div> {/* Reusing icon for simplicity */}
-                 <div>
-                   <h4 className="font-bold text-white">Follow Us</h4>
-                   <p className="text-stone-400 text-sm">Check out our latest builds on Instagram & TikTok.</p>
-                 </div>
+                <div className="mt-1"><Box className="h-6 w-6 text-wood-500" /></div> {/* Reusing icon for simplicity */}
+                <div>
+                  <h4 className="font-bold text-white">Follow Us</h4>
+                  <p className="text-stone-400 text-sm">Check out our latest builds on Instagram & TikTok.</p>
+                </div>
               </div>
             </div>
-           </div>
+          </div>
 
-           <div className="relative z-10 mt-12 pt-12 border-t border-stone-800">
-             <p className="text-wood-400 font-serif italic text-lg">"Measure twice, cut once."</p>
-           </div>
+          <div className="relative z-10 mt-12 pt-12 border-t border-stone-800">
+            <p className="text-wood-400 font-serif italic text-lg">"Measure twice, cut once."</p>
+          </div>
         </div>
 
         {/* Links Side */}
         <div className="p-12 md:w-1/2 flex flex-col justify-center">
           <h3 className="text-2xl font-bold text-stone-900 mb-8">Connect With Us</h3>
-          
+
           <div className="space-y-4">
-            <a 
+            <a
               href={SOCIAL_LINKS.email}
               className="flex items-center justify-between p-6 bg-stone-50 hover:bg-wood-50 border border-stone-200 rounded-xl transition-colors group"
             >
@@ -417,9 +401,9 @@ const ContactPage = () => {
               <ArrowRight className="h-5 w-5 text-stone-400 group-hover:text-wood-500" />
             </a>
 
-            <a 
+            <a
               href={SOCIAL_LINKS.instagram}
-              target="_blank" 
+              target="_blank"
               rel="noreferrer"
               className="flex items-center justify-between p-6 bg-stone-50 hover:bg-pink-50 border border-stone-200 rounded-xl transition-colors group"
             >
@@ -427,9 +411,9 @@ const ContactPage = () => {
               <ArrowRight className="h-5 w-5 text-stone-400 group-hover:text-pink-500" />
             </a>
 
-            <a 
+            <a
               href={SOCIAL_LINKS.tiktok}
-              target="_blank" 
+              target="_blank"
               rel="noreferrer"
               className="flex items-center justify-between p-6 bg-stone-50 hover:bg-stone-100 border border-stone-200 rounded-xl transition-colors group"
             >
@@ -437,9 +421,9 @@ const ContactPage = () => {
               <ArrowRight className="h-5 w-5 text-stone-400 group-hover:text-black" />
             </a>
 
-             <a 
+            <a
               href={SOCIAL_LINKS.youtube}
-              target="_blank" 
+              target="_blank"
               rel="noreferrer"
               className="flex items-center justify-between p-6 bg-stone-50 hover:bg-red-50 border border-stone-200 rounded-xl transition-colors group"
             >
@@ -462,10 +446,6 @@ const App = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location]);
-
-  const handleNavigation = (path: NavRoute) => {
-    // In a real Router setup, we usually use <Link>, but this works for the prop passing to Navbar
-  };
 
   return (
     <div className="min-h-screen flex flex-col font-sans text-stone-800">
