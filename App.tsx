@@ -188,22 +188,20 @@ const PortfolioPage = () => {
           </div>
         )}
 
-        {/* TikTok Grid (Simulated) */}
+        {/* TikTok Grid */}
         {activeTab === 'tiktok' && (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {TIKTOK_VIDEOS.map((video) => (
-              <div key={video.id} className="bg-black rounded-xl overflow-hidden shadow-lg aspect-[9/16] relative group">
-                {/* Placeholder for TikTok Embed - In real app use proper TikTok embed script */}
-                <div className="absolute inset-0 flex items-center justify-center bg-stone-800 text-stone-500">
-                  <div className="text-center p-4">
-                    <p className="font-bold text-white mb-2">TikTok Video</p>
-                    <p className="text-xs">{video.description}</p>
-                    <p className="text-xs mt-4 text-stone-600">ID: {video.embedUrl}</p>
-                  </div>
-                </div>
-                {/* Overlay */}
-                <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/90 to-transparent">
-                  <p className="text-white text-sm font-medium truncate">{video.description}</p>
+              <div key={video.id} className="bg-stone-900 rounded-xl overflow-hidden shadow-lg aspect-[9/16] relative group border border-stone-800">
+                <iframe
+                  src={`https://www.tiktok.com/embed/v2/${video.embedUrl}`}
+                  className="w-full h-full absolute inset-0 border-0"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  title={`TikTok video ${video.id}`}
+                ></iframe>
+                {/* Overlay description only appears on hover/focus if needed, but iframe usually captures events */}
+                <div className="pointer-events-none absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/90 to-transparent z-10">
+                  <p className="text-white text-sm font-medium truncate shadow-sm">{video.description}</p>
                 </div>
               </div>
             ))}

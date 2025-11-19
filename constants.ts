@@ -6,7 +6,7 @@ export const BRAND_LOGO = {
   alt: 'Trunc Woodworks Logo'
 };
 
-export const HERO_IMAGE_URL = 'images/hero.jpg';
+export const HERO_IMAGE_URL = 'images/hero.jpeg';
 
 export const SOCIAL_LINKS = {
   instagram: 'https://instagram.com/truncwoodworks',
@@ -22,7 +22,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     basePrice: '$450+',
     description: 'Sturdy, handcrafted benches for entryways, dining tables, or mudrooms. Built to handle daily life.',
     features: ['Solid hardwood construction', 'Custom lengths', 'Optional storage underneath'],
-    imageUrl: 'images/entryway_bench.jpg'
+    imageUrl: 'images/entryway_bench.jpeg'
   },
   {
     id: '2',
@@ -30,7 +30,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     basePrice: '$600+',
     description: 'Floor-to-ceiling or floating wall-mounted units designed to showcase your library perfectly.',
     features: ['Adjustable shelving', 'Built-in options available', 'Crown molding details'],
-    imageUrl: 'images/bookshelf.jpg'
+    imageUrl: 'images/bookshelf.jpeg'
   },
   {
     id: '3',
@@ -38,7 +38,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     basePrice: '$120',
     description: 'Heirloom quality rulers to track your little one’s height. Moves with you, unlike marks on a doorframe.',
     features: ['Custom name engraving', 'Variety of stains', 'Easy wall mounting'],
-    imageUrl: 'https://picsum.photos/600/400?random=22'
+    imageUrl: 'images/growth_chart.jpeg'
   },
   {
     id: '4',
@@ -46,7 +46,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     basePrice: '$850+',
     description: 'Montessori-inspired open wardrobes that encourage independence and keep clothes organized.',
     features: ['Accessible height', 'Solid wood joinery', 'Safety rounded corners'],
-    imageUrl: 'https://picsum.photos/600/400?random=23'
+    imageUrl: 'images/kids_wardrobe.jpeg'
   },
   {
     id: '5',
@@ -54,7 +54,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     basePrice: '$350+',
     description: 'Durable, low-profile tables perfect for trains, legos, drawing, and imaginative play.',
     features: ['Easy-clean finish', 'Storage bins included', 'Rounded edges for safety'],
-    imageUrl: 'https://picsum.photos/600/400?random=24'
+    imageUrl: 'images/play_table.jpeg'
   },
   {
     id: '6',
@@ -62,7 +62,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     basePrice: '$400+',
     description: 'Stylish organization solutions that look beautiful in your living room while hiding the clutter.',
     features: ['Deep storage cubbies', 'Soft-close lids', 'Modern aesthetic'],
-    imageUrl: 'https://picsum.photos/600/400?random=25'
+    imageUrl: 'images/toy_storage.jpeg'
   },
   {
     id: '7',
@@ -70,7 +70,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     basePrice: '$250+',
     description: 'Safety without sacrificing style. Secure, custom-fit gates that match your home’s woodwork.',
     features: ['Secure latching', 'Matches stair banisters', 'No-trip threshold'],
-    imageUrl: 'https://picsum.photos/600/400?random=26'
+    imageUrl: 'images/baby_gate.jpeg'
   },
   {
     id: '8',
@@ -78,7 +78,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     basePrice: '$900+',
     description: 'A cozy den for your pet that doubles as a functional end table or media console.',
     features: ['Chew-resistant bars', 'Removable tray', 'Integrates with decor'],
-    imageUrl: 'https://picsum.photos/600/400?random=27'
+    imageUrl: 'images/dog_crate.jpeg'
   },
   {
     id: '9',
@@ -86,7 +86,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     basePrice: '$80+',
     description: 'Showcase your memories with handcrafted frames made from premium hardwoods to match your decor.',
     features: ['Custom sizing', 'Museum-quality glass options', 'Various wood species available'],
-    imageUrl: 'https://picsum.photos/600/400?random=28'
+    imageUrl: 'images/picture_frame.jpeg'
   },
   {
     id: '10',
@@ -94,7 +94,7 @@ export const CATALOG_ITEMS: CatalogItem[] = [
     basePrice: '$65+',
     description: 'Upgrade your kitchen or built-ins with custom-made doors. Shaker, slab, or raised panel styles available.',
     features: ['Exact sizing', 'Hinge boring available', 'Paint-grade or stain-grade'],
-    imageUrl: 'https://picsum.photos/600/400?random=29'
+    imageUrl: 'images/cabinet_doors.jpeg'
   }
 ];
 
@@ -169,8 +169,8 @@ export const GALLERY_PROJECTS: Project[] = [
 
 // Mock TikTok IDs for embedding. In a real scenario, these would be real video IDs.
 export const TIKTOK_VIDEOS: TikTokVideo[] = [
-  { id: '1', embedUrl: '7234567890123456789', description: 'Making a dovetail joint by hand' },
-  { id: '2', embedUrl: '7234567890123456788', description: 'Applying Odie\'s Oil finish' },
-  { id: '3', embedUrl: '7234567890123456787', description: 'Shop tour 2024' },
-  { id: '4', embedUrl: '7234567890123456786', description: 'Client reveal: Dining Table' },
+  { id: '1', embedUrl: '7492063509136608554', description: 'Custom Children\'s Costume Wardrobe' },
+  { id: '2', embedUrl: '7493604143953759534', description: 'Router Table Cabinet Build' },
+  { id: '3', embedUrl: '7492064368994094378', description: '3D Printed Baby Gate Repair' },
+  { id: '4', embedUrl: '7503267279488994606', description: 'Power Wheels Battery Swap' },
 ];
