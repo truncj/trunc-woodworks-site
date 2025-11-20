@@ -334,8 +334,6 @@ export const GALLERY_PROJECTS: Project[] = [
       'images/portfolio/kids_wardrobe/build/build3.jpeg',
       'images/portfolio/kids_wardrobe/build/build4.jpeg',
       'images/portfolio/kids_wardrobe/build/build5.jpeg',
-      'images/portfolio/kids_wardrobe/build/build6.jpeg',
-      'images/portfolio/kids_wardrobe/build/build7.jpeg',
     ]
   },
   {

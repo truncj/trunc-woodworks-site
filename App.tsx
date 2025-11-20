@@ -26,11 +26,11 @@ const HomePage = () => {
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 text-center">
           <div className="mb-8 flex justify-center">
-            <div className="p-2 bg-white/10 backdrop-blur-sm rounded-full border border-stone-600">
+            <div className="bg-white/10 backdrop-blur-sm rounded-full border border-stone-600 overflow-hidden">
               <img
                 src={BRAND_LOGO.src}
                 alt={BRAND_LOGO.alt}
-                className="w-32 h-32 md:w-48 md:h-48 rounded-full object-cover bg-stone-50 shadow-2xl"
+                className="w-32 h-32 md:w-48 md:h-48 rounded-full object-cover bg-stone-50 shadow-2xl transform scale-125"
               />
             </div>
           </div>
@@ -38,7 +38,7 @@ const HomePage = () => {
             Made to Measure. <span className="text-wood-500">Built to Last.</span>
           </h1>
           <p className="text-xl text-stone-300 mb-10 font-light max-w-2xl mx-auto leading-relaxed">
-            Custom woodworking for your home and family. From Montessori-style kids' furniture to stylish dog crates and built-ins, we build practical, beautiful pieces designed to fit your life.
+            Custom woodworking for your home and family. From Montessori-style kid furniture to stylish dog crates and built-ins, we build practical, beautiful pieces designed to fit your life.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <button

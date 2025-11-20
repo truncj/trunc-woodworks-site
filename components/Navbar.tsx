@@ -27,18 +27,18 @@ const Navbar: React.FC<NavbarProps> = ({ currentRoute, onNavigate }) => {
     <nav className="sticky top-0 z-50 bg-stone-900/95 backdrop-blur-md text-stone-100 border-b border-stone-800 shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20 items-center">
-          
+
           {/* Logo */}
-          <div 
+          <div
             className="flex items-center space-x-3 cursor-pointer group"
             onClick={() => handleNav(NavRoute.HOME)}
           >
-            <div className="relative">
-               <img 
-                 src={BRAND_LOGO.src} 
-                 alt={BRAND_LOGO.alt} 
-                 className="h-12 w-12 rounded-full object-cover bg-stone-50 p-0.5 border-2 border-stone-800 group-hover:border-wood-400 transition-colors" 
-               />
+            <div className="relative overflow-hidden rounded-full">
+              <img
+                src={BRAND_LOGO.src}
+                alt={BRAND_LOGO.alt}
+                className="h-12 w-12 rounded-full object-cover bg-stone-50 border-2 border-stone-800 group-hover:border-wood-400 transition-colors transform scale-125"
+              />
             </div>
             <span className="font-serif text-xl md:text-2xl font-bold tracking-wider hidden sm:block">TRUNC <span className="text-wood-400">Woodworks</span></span>
           </div>
@@ -49,11 +49,10 @@ const Navbar: React.FC<NavbarProps> = ({ currentRoute, onNavigate }) => {
               <button
                 key={item.name}
                 onClick={() => handleNav(item.path)}
-                className={`px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
-                  currentRoute === item.path
-                    ? 'text-wood-400 bg-stone-800'
-                    : 'text-stone-300 hover:text-white hover:bg-stone-800'
-                }`}
+                className={`px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 ${currentRoute === item.path
+                  ? 'text-wood-400 bg-stone-800'
+                  : 'text-stone-300 hover:text-white hover:bg-stone-800'
+                  }`}
               >
                 {item.name}
               </button>
@@ -80,11 +79,10 @@ const Navbar: React.FC<NavbarProps> = ({ currentRoute, onNavigate }) => {
               <button
                 key={item.name}
                 onClick={() => handleNav(item.path)}
-                className={`block w-full text-left px-3 py-4 rounded-md text-base font-medium ${
-                  currentRoute === item.path
-                    ? 'text-wood-400 bg-stone-800'
-                    : 'text-stone-300 hover:text-white hover:bg-stone-800'
-                }`}
+                className={`block w-full text-left px-3 py-4 rounded-md text-base font-medium ${currentRoute === item.path
+                  ? 'text-wood-400 bg-stone-800'
+                  : 'text-stone-300 hover:text-white hover:bg-stone-800'
+                  }`}
               >
                 {item.name}
               </button>
