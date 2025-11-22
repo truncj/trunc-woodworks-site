@@ -7,11 +7,13 @@ const Footer: React.FC = () => {
     <footer className="bg-stone-950 text-stone-400 py-12 border-t border-stone-900">
       <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
         <div className="mb-6 md:mb-0 flex flex-col md:flex-row items-center md:items-start gap-4 text-center md:text-left">
-          <img 
-            src={BRAND_LOGO.src} 
-            alt={BRAND_LOGO.alt} 
-            className="h-16 w-16 rounded-full bg-stone-100 p-1 object-cover"
-          />
+          <div className="relative overflow-hidden rounded-full">
+            <img
+              src={BRAND_LOGO.src}
+              alt={BRAND_LOGO.alt}
+              className="h-16 w-16 rounded-full bg-stone-100 object-cover transform scale-125"
+            />
+          </div>
           <div>
             <h2 className="text-2xl font-serif font-bold text-white tracking-wider mb-1">TRUNC Woodworks</h2>
             <p className="text-sm">Handcrafted in the USA.</p>
